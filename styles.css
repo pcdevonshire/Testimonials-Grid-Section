@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+*, 
+*::after, 
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --violet: hsl(263, 55%, 52%);
+    --gray: hsl(217, 19%, 35%);
+    --black: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+    --lightGray: hsl(0, 0%, 81%);
+    --lightBlue: hsl(210, 46%, 95%);
+    --Barlow: 'Barlow Semi Condensed', sans-serif;
+}
+
+::selection {
+    color: var(--white);
+    background-color: var(--violet);
+}
+
+body {
+    background-color: var(--lightBlue);
+    color: var(--white);
+    min-height: 100vh;
+    min-width: 375px;
+    max-width: 1980px;
+    overflow-x: hidden;
+    margin: 0 auto;
+    font-family: var(--Barlow);
+    padding: 5em 1.5em;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-bottom: 2em;
+    padding: 1.5em 2em;
+}
+
+.daniel {
+    background: url(images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: top right 1.5em;
+    background-color: var(--violet);
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.profile img {
+    border: 2px solid hsla(0, 0%, 100%, .5);
+    border-radius: 50%;
+    margin-right: 1em;
+    width: 35px;
+}
+
+h1 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+span {
+    color: hsla(0, 0%, 100%, .5);
+    font-size: 13px;
+}
+
+h2 {
+    font-size: 21px;
+    line-height: 1.3;
+    margin-bottom: 1em;
+}
+
+p {
+    color: hsla(0, 0%, 100%, .7);
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 1em;
+    max-width: 95%;
+}
+
+.jonathan {
+    background-color: var(--gray);
+}
+
+.jeanette, .kira {
+    background-color: var(--white);
+    color: var(--gray);
+}
+
+.jeanette h1, .kira h1 {
+    font-weight: 600;
+}
+
+.jeanette span, .kira span {
+    color: hsla(217, 19%, 35%, .5);
+}
+
+.jeanette p, .kira p {
+    color: hsla(217, 19%, 35%, .7);
+}
+
+.patrick {
+    background-color: var(--black);
+}
+
+@media only screen and (min-width: 750px) {
+
+    body {
+        display: grid;
+        place-items: center;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 1250px;
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 1.5em;
+    }
+
+    .card {
+        margin-bottom: 0;
+    }
+    
+    h2 {
+        font-size: 22px;
+        line-height: 1.25;
+    }
+
+    p {
+        font-size: 14px;
+        margin-bottom: 0;
+        max-width: 100%;
+    }
+
+    .daniel {
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+    }
+
+    .jonathan {
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+    }
+
+    .jeanette {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+
+    .patrick {
+        grid-column: 2 / 4;
+        grid-row: 2 / 3;
+    }
+
+    .kira {
+        grid-column: 4 / 5;
+        grid-row: 1 / 3;
+    }
+
+}
