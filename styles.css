@@ -157,6 +157,7 @@ p {
     .daniel {
         grid-column: 1 / 3;
         grid-row: 1 / 2;
+        background-position: top right 5em;
     }
 
     .jonathan {
